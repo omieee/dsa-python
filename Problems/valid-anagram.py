@@ -43,7 +43,7 @@ t = "cat"
 if sorted(s) == sorted(t): # O(n log n)
   print("True")
 else:
-  print("False)
+  print("False")
 
 # Time: O(n log n)
 # Space: O(n)
@@ -61,6 +61,22 @@ if at the end all gone means it was an anagram else not an angram
 Time Complexity: for two sequential for loops it is O(n) and not O(n2)
 Space Complexity: the hashmap will store at most one entry per character so worst case if each character is unique
 it will be O(n)
+
+Dry Run:
+s=aab
+t=aba
+
+sc={"a":2, "b":1}
+loop on t
+sc={"a":1, "b":1} when t[i]=a
+sc={"a":1} b is poped out when t[i]=b
+sc={}a is popped out when t[i]=a
+it's an anagram
+
+Alternatively this can be done using counter()
+
+counter(s) == counter(t) #O(n)
+
 
 '''
 
