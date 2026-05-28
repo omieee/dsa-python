@@ -95,8 +95,8 @@ def two_sum(nums, target):
     seen = {}  # O(1)
     for i, v in enumerate(
         nums
-    ):  # O(n) And as this is the highest time consuming operation so it 
-        #will be the time complexity
+    ):  # O(n) And as this is the highest time consuming operation so it
+        # will be the time complexity
         need_for = target - v  # O(1)
         if need_for in seen:  # O(1)
             return [seen[need_for], i]  # O(1)
