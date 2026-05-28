@@ -1,4 +1,4 @@
-'''
+"""
 Two Sum — practice problem
 
 Given an array of integers nums and an integer target, return the indices of the two numbers that add up to target.
@@ -40,17 +40,17 @@ Bonus questions to think about (don't answer unless you want feedback):
 What is the time complexity of a brute-force approach?
 Can you do better than O(n²)? What data structure might help?
 What would the space complexity be for your approach?
-'''
+"""
 
-'''
+"""
 My Approach
 
 So I have a list and a target . I will iterate through the list and 
 will subtract target - cureent index value which will be looked up in a seen 
 hashmap .. if it exist we found the item then return the current index and the index of the seen item 
-'''
+"""
 
-'''
+"""
 Big O Analysis
 Worst Case Scenario:
     If we had followed brute force approach we would have to run nested for loops
@@ -82,16 +82,17 @@ Dry Run (brute force)
   goes on until we get target
   once we get target will return i and j value
 
-'''
+"""
 
 
 def two_sum(nums, target):
-  seen = {} #O(1)
-  for i, v in enumerate(nums): #O(n) And as this is the highest time consuming operation so it will be the time complexity
-    need_for = target-v #O(1)
-    if need_for in seen: #O(1)
-      return [seen[need_for], i] #O(1)
-    else: #O(1)
-      seen[v] = i #O(1)
-  return [] #O(1)
-
+    seen = {}  # O(1)
+    for i, v in enumerate(
+        nums
+    ):  # O(n) And as this is the highest time consuming operation so it will be the time complexity
+        need_for = target - v  # O(1)
+        if need_for in seen:  # O(1)
+            return [seen[need_for], i]  # O(1)
+        else:  # O(1)
+            seen[v] = i  # O(1)
+    return []  # O(1)

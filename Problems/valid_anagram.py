@@ -1,4 +1,4 @@
-'''
+"""
 Valid Anagram
 Given two strings s and t, return True if t is an anagram of s, and False otherwise.
 
@@ -78,9 +78,7 @@ Alternatively this can be done using counter()
 counter(s) == counter(t) #O(n)
 
 
-'''
-
-
+"""
 
 s = "aab"
 t = "abb"
@@ -90,24 +88,23 @@ def is_anagram(s, t):
     str_counter = {}
     if len(s) != len(t):
         return False
-    for v in s: # O(n)
-        if v in str_counter: #O(1)
-            str_counter[v] += 1 #O(1)
+    for v in s:  # O(n)
+        if v in str_counter:  # O(1)
+            str_counter[v] += 1  # O(1)
         else:
-            str_counter[v] = 1 #O(1)
+            str_counter[v] = 1  # O(1)
 
-    for v in t: # O(n)
-        if v in str_counter: # O(1)
-            if str_counter[v] == 1: #O(1) 
-                str_counter.pop(v) #O(1)
+    for v in t:  # O(n)
+        if v in str_counter:  # O(1)
+            if str_counter[v] == 1:  # O(1)
+                str_counter.pop(v)  # O(1)
             else:
-                str_counter[v] -= 1 # O(1)
+                str_counter[v] -= 1  # O(1)
         else:
             return False
-    if(len(str_counter) >= 1): #O(1)
+    if len(str_counter) >= 1:  # O(1)
         return False
     return True
 
+
 print(is_anagram(s, t))
-
-
