@@ -1,7 +1,8 @@
 """
 Two Sum — practice problem
 
-Given an array of integers nums and an integer target, return the indices of the two numbers that add up to target.
+Given an array of integers nums and an integer target, return the indices
+ of the two numbers that add up to target.
 
 You may assume:
 
@@ -47,23 +48,28 @@ My Approach
 
 So I have a list and a target . I will iterate through the list and 
 will subtract target - cureent index value which will be looked up in a seen 
-hashmap .. if it exist we found the item then return the current index and the index of the seen item 
+hashmap .. if it exist we found the item then return the current index and 
+the index of the seen item 
 """
 
 """
 Big O Analysis
 Worst Case Scenario:
-    If we had followed brute force approach we would have to run nested for loops
-    for out loop that would start from n[0] and inner loop would start from n[1] and so on
+    If we had followed brute force approach we would have to run nested for 
+    loops
+    for out loop that would start from n[0] and inner loop would start from 
+    n[1] and so on
     for n = 4, we would have to run 4 * 3 = 12 iterations
     Time Complexity: O(n^2)
     Space Complexity: O(1) as we are not using any extra space
     Total Time Complexity: O(n^2) * O(1) = O(n^2)
     Total Space Complexity: O(1)
-    This is a worst case scenario as we are not able to find the items in the list in the first iteration itself
+    This is a worst case scenario as we are not able to find the items in 
+    the list in the first iteration itself
 
 Now the following code scenario is better than the brute force approach
-Better than O(n^2) because we are able to find the items in the list in the first iteration itself
+Better than O(n^2) because we are able to find the items in the list in the 
+first iteration itself
 Time Complexity: O(n)
   - We are iterating through the list once so O(n)
   - We are doing a constant time operation for each iteration so O(1)
@@ -89,7 +95,8 @@ def two_sum(nums, target):
     seen = {}  # O(1)
     for i, v in enumerate(
         nums
-    ):  # O(n) And as this is the highest time consuming operation so it will be the time complexity
+    ):  # O(n) And as this is the highest time consuming operation so it 
+        #will be the time complexity
         need_for = target - v  # O(1)
         if need_for in seen:  # O(1)
             return [seen[need_for], i]  # O(1)

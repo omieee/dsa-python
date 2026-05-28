@@ -1,8 +1,10 @@
 """
 Valid Anagram
-Given two strings s and t, return True if t is an anagram of s, and False otherwise.
+Given two strings s and t, return True if t is an anagram of s, and False
+ otherwise.
 
-An anagram is a word formed by rearranging the letters of another word, using all the original letters exactly once.
+An anagram is a word formed by rearranging the letters of another word,
+ using all the original letters exactly once.
 
 Example 1
 
@@ -52,14 +54,17 @@ Ideal solution:
 
 if len(s) !- len(t) Return False
 
-run the first loop onb s and store the key value as character : count(occurance)
+run the first loop onb s and store the key value as character : 
+count(occurance)
 
-run a loop on t and for each index value found in seen, decrease the counter for that character until it becomes 1 then
+run a loop on t and for each index value found in seen, decrease 
+the counter for that character until it becomes 1 then
 delete the key from hashmap
 if at the end all gone means it was an anagram else not an angram
 
 Time Complexity: for two sequential for loops it is O(n) and not O(n2)
-Space Complexity: the hashmap will store at most one entry per character so worst case if each character is unique
+Space Complexity: the hashmap will store at most one entry per character 
+so worst case if each character is unique
 it will be O(n)
 
 Dry Run:

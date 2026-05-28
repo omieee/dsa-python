@@ -5,19 +5,31 @@
 account_ids = [12, 32, 43, 123, 89, 67]  # Existing account holder account_ids
 
 # O(1)
-# will be a constant time operation such as appending to a list which happens to the end of list, In real situation is is like a new person opens a new account wil account account_ids
-# and there will also be a situation when we want to remove the last person will pop him/her out
+# will be a constant time operation such as appending to a list which 
+# happens to the 
+# end
+#  of list, In real situation is is like a new person opens a new account 
+# wil account 
+# account_ids
+# and there will also be a situation when we want to remove the last person
+#  will pop 
+# him/her out
 
 print(account_ids)
 print(
     account_ids[3]
-)  # constant time because it is directly going to 3rd location and pulling its value which will be 123 currently
+)  # constant time because it is directly going to 3rd location and pulling 
+#its value 
+# which will be 123 currently
 account_ids[4] = (
-    90  # this will also be a constant operation as the values gets updated in place
+    90  # this will also be a constant operation as the values gets updated 
+    #in place
 )
 account_ids.append(
     66
-)  # this will be a constant operation as append will add to the end no furtehr shifting to the right
+)  # this will be a constant operation as append will add to the end no 
+#furtehr 
+#shifting to the right
 account_ids.insert(
     3, 231
 )  # this will not be a constant operation as it will shift value to right
