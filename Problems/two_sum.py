@@ -85,10 +85,6 @@ Dry Run (brute force)
 '''
 
 
-
-nums = [2,7,11,15]
-target = 9
-
 def two_sum(nums, target):
   seen = {} #O(1)
   for i, v in enumerate(nums): #O(n) And as this is the highest time consuming operation so it will be the time complexity
