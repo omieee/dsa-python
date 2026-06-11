@@ -1,9 +1,9 @@
-'''
+"""
 Problem:
 
-Given an array of strings strs, group the anagrams together. 
+Given an array of strings strs, group the anagrams together.
 You can return the answer in any order.
-An Anagram is a word or phrase formed by rearranging the letters of a 
+An Anagram is a word or phrase formed by rearranging the letters of a
 different word or phrase, typically using all the original letters exactly once.
 Example 1:
 Input: strs = ["eat","tea","tan","ate","nat","bat"]
@@ -46,13 +46,13 @@ return
 list(res.values()) which will return [["cat", "tac"]]
 
 Big O Complexity:
-Time Complexity: O(n * m log m) - because we are sorting each string and there 
+Time Complexity: O(n * m log m) - because we are sorting each string and there
 are n strings and each string has m characters
 Space Complexity: O(n * m) - because we are storing each string in the
 dictionary
 and there are n strings and each string has m characters
 
-'''
+"""
 
 from collections import defaultdict
 
@@ -66,7 +66,7 @@ def group_anagrams_brute_force(strs: list[str]) -> list[list[str]]:
     return list(res.values())
 
 
-'''
+"""
 Now let's solve it with a better Big O complexity
 
 This approach is better than the brute force approach because we are not sorting
@@ -123,16 +123,16 @@ and there are n strings and each string has m characters.
 
 Space Complexity O(n * m) - because we are storing each string in the dictionary
 and there are n strings and each string has m characters
-'''
+"""
 
 
 def group_anagrams_v2(strs: list[str]) -> list[list[str]]:
     res = defaultdict(list)
 
-    for str in strs:
+    for s in strs:
         count = [0] * 26
 
-        for c in str:
+        for c in s:
             count[ord(c) - ord("a")] += 1
-        res[tuple(count)].append(str)
+        res[tuple(count)].append(s)
     return list(res.values())
