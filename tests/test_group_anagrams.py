@@ -1,11 +1,11 @@
-from Problems.group_anagrams import groupAnagramsBruteForce, groupAnagramsV2
+from Problems.group_anagrams import group_anagrams_brute_force, group_anagrams_v2
 
 def test_group_anagrams_brute_force():
-    assert groupAnagramsBruteForce(["eat","tea"]) == [["eat","tea"]]
-    assert groupAnagramsBruteForce([""]) == [[""]]
-    assert groupAnagramsBruteForce(["a"]) == [["a"]]
+    assert group_anagrams_brute_force(["eat","tea"]) == [["eat","tea"]]
+    assert group_anagrams_brute_force([""]) == [[""]]
+    assert group_anagrams_brute_force(["a"]) == [["a"]]
 
 def test_group_anagrams_v2():
-    assert groupAnagramsV2(["eat","tea"]) == [["eat","tea"]]
-    assert groupAnagramsV2([""]) == [[""]]
-    assert groupAnagramsV2(["a"]) == [["a"]]
+    assert group_anagrams_v2(["eat","tea"]) == [["eat","tea"]]
+    assert group_anagrams_v2([""]) == [[""]]
+    assert group_anagrams_v2(["a"]) == [["a"]]
