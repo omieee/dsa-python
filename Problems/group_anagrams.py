@@ -82,16 +82,22 @@ Step 2: For each string we will create character counter and we know
         that we can only have 26 englist small character we can create a
         list of 26 zeros
 Step 3: Now will loop through each character of the looped `str` from `strs`
-Step 4. We need to map the each chartacter in such as way that count[0] actually 
+Step 4. We need to map the each chartacter in such as way that count[0] 
+        actually 
         points to character `a` and count[25] points to character `z`
         So oneapproch to achieve this is we know the unicode runs sequentially
-        for `a` to `z`, so we can subtract the unicode of `c` from the string with
+        for `a` to `z`, so we can subtract the unicode of `c` from the string 
+        with
         fixed unicode of `a` and then increment that map value by 1
-Step 5. So from step 4 for ex for a str = `ace` we will get count = [1,0,1,0,1,....]
-Step 6. We Will strore our map in out default dict as res = {(1,0,1,0,1): ["ace"]}
-Step 7. Loop will go through other strings and if same key is received it will append
+Step 5. So from step 4 for ex for a str = `ace` we will get 
+        count = [1,0,1,0,1,....]
+Step 6. We Will strore our map in out default dict as 
+        res = {(1,0,1,0,1): ["ace"]}
+Step 7. Loop will go through other strings and if same key is received it will
+        append
 Step 8: Now we got all the annagrams pair
-Step 9: As problem says give a list of lists we will return list(list(res.values())) 
+Step 9: As problem says give a list of lists we will return 
+        list(list(res.values())) 
 
 Dry Run:
 Input: strs = ["cat", "tac"]

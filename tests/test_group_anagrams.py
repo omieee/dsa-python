@@ -1,4 +1,8 @@
-from Problems.group_anagrams import group_anagrams_brute_force, group_anagrams_v2
+from Problems.group_anagrams import (
+    group_anagrams_brute_force,
+    group_anagrams_v2,
+)
+
 
 def test_group_anagrams_brute_force():
     assert group_anagrams_brute_force(["eat","tea"]) == [["eat","tea"]]
