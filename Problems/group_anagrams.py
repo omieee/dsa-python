@@ -26,7 +26,8 @@ Time Complexity: O(n * m log m)
 Space Complexity: O(n * m)
 
 Let's solve one with mental model:
-we have a ret of type defaultdict of list (only because we don't want while insertion
+we have a ret of type defaultdict of list (only because we don't want while
+insertion
 there is a missing index)
 
 Input: strs = ["cat", "tac"]
@@ -40,25 +41,30 @@ Will run the for loop for each string in strs
 so finally our res {} will look something like this:
 
 res = defaultdict{"act": ["cat", "tac"]}
-will return it like res.values() and because we want a list of list we will return
+will return it like res.values() and because we want a list of list we will
+return
 list(res.values()) which will return [["cat", "tac"]]
 
 Big O Complexity:
 Time Complexity: O(n * m log m) - because we are sorting each string and there 
 are n strings and each string has m characters
-Space Complexity: O(n * m) - because we are storing each string in the dictionary
+Space Complexity: O(n * m) - because we are storing each string in the
+dictionary
 and there are n strings and each string has m characters
 
 '''
 
+from collections import defaultdict
 
-def groupAnagramsBruteForce(strs: list(str)) -> list[list[str]]
+
+def group_anagrams_brute_force(strs: list[str]) -> list[list[str]]:
     res = defaultdict(list)
 
     for st in strs:
         res["".join(sorted(st))].append(st)
 
     return list(res.values())
+
 
 '''
 Now let's solve it with a better Big O complexity
@@ -113,8 +119,8 @@ Space Complexity O(n * m) - because we are storing each string in the dictionary
 and there are n strings and each string has m characters
 '''
 
-def groupAnagramsV2(strs: list(str)) -> list[list[str]]:
 
+def group_anagrams_v2(strs: list[str]) -> list[list[str]]:
     res = defaultdict(list)
 
     for str in strs:
