@@ -110,6 +110,3 @@ def is_anagram(s, t):
     if len(str_counter) >= 1:  # O(1)
         return False
     return True
-
-
-print(is_anagram(s, t))

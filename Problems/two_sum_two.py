@@ -27,9 +27,9 @@ Intuition:
 Because the list is sorted we can have two pointers one pointing
 left and the other pointing end of list. then we will check if there sum is
 greater then or less then the target. If the sum is less then the target
-will move right pointer left one position (r -= 1) and then check again.
-similarly if target is greater than the sum we will move left pointer right.
-(l += 1). Until we find target == sum. If found will return the [l+1,r+1].
+will move left pointer right one position (r += 1) and then check again.
+similarly if sum is greater than the target we will move right pointer left.
+(r -= 1). Until we find target == sum. If found will return the [l+1,r+1].
 
 Dry Run:
 
@@ -40,7 +40,7 @@ target = 3
 2.  Loop till left is less then right (because adding same number is not the
     solution)
 3.  if sum of values at l + r > target means we need to decrease r by 1
-4.  if sum of values of l + r < target
+4.  if sum of values of l + r < target means we need to increase l by 1
 5.  if sum of values of l + r == target then return [l+1, r+1]
 
 

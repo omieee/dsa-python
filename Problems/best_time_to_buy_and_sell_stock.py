@@ -46,7 +46,7 @@ Dry Run:
 prices = [10,1,5,6,7,1]
 Output = 6
 
-1.  l = 0, r = len(prices) - 1
+1.  l = 0, r = 1
 2.  run a for loop from start of prices to the end
 3.  if prices[l] > prices[r], means we are not buying at best price
     we will move l and r by 1 place
