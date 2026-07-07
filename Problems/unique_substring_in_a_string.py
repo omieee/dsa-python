@@ -19,12 +19,11 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 def lengthOfLongestSubstring(s: str) -> int:
     seen = set()
-    l, maxcount = 0, 0
+    left, maxcount = 0, 0
     for r in range(len(s)):
         while s[r] in seen:
-            seen.remove(s[l])
-            l += 1
+            seen.remove(s[left])
+            left += 1
         seen.add(s[r])
-        maxcount = max(maxcount, r - l + 1)
+        maxcount = max(maxcount, r - left + 1)
     return maxcount
-

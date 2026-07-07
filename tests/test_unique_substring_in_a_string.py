@@ -1,5 +1,6 @@
 from Problems.unique_substring_in_a_string import lengthOfLongestSubstring
 
+
 def test_unique_substring_in_a_string() -> None:
     assert lengthOfLongestSubstring("abcabcbb") == 3
     assert lengthOfLongestSubstring("bbbbb") == 1
