@@ -1,7 +1,7 @@
 from Closed_Book.products_of_array_except_self import (
     productExceptSelfBrute,
-    productExceptSelfOptimal,
     productExceptSelfOof1,
+    productExceptSelfOptimal,
 )
 
 
