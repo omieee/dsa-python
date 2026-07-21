@@ -19,10 +19,10 @@ def sortedSquares(nums: list[int]) -> list[int]:
     Iteration 3: Is (-2 ** 2) > (-1 ** 2) [YES]:
                  output.append(4) and lptr increase by 1
     Iteration 4: Is (-1 ** 2) > (-1 ** 2) [NO]: BOTH ARE POINTING CURRENTLY TO SAME
-                 output.append(2) and rptr decrease by 1
+                 output.append(1) and rptr decrease by 1
     Iteration 5: won't happen because lptr = 1 and rptr is now 0
 
-    At this point output list is = [16,9,4,2]. But we are asked to return sorted so
+    At this point output list is = [16,9,4,1]. But we are asked to return sorted so
     return output[::-1] Basically return everything in reverse
     
     """
