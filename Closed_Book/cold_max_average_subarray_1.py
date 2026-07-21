@@ -37,7 +37,7 @@ Space Complexity: O(1)
 """
 
 
-def findMaxAverage(self, nums: list[int], k: int) -> float:
+def findMaxAverage(nums: list[int], k: int) -> float:
     window_sum = sum(nums[:k])
     max_sum = window_sum
     for i in range(k, len(nums)):

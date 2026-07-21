@@ -26,7 +26,7 @@ def two_sum_two(nums: list[int], target: int) -> list[int]:
     lptr = 0
     rptr = len(nums) - 1
 
-    while rptr >= lptr:
+    while rptr > lptr:
         if nums[lptr] + nums[rptr] == target:
             return [lptr + 1, rptr + 1]
         elif nums[lptr] + nums[rptr] > target:
@@ -37,3 +37,4 @@ def two_sum_two(nums: list[int], target: int) -> list[int]:
 
 # print(two_sum_two([2, 7, 11, 15], 9))
 # print(two_sum_two([2, 3, 4], 6))
+print(two_sum_two([1, 2, 4], 4))

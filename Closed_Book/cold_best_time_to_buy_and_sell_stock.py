@@ -10,32 +10,21 @@ for loop for buy:
  for loop for sell (starts one day after bought):
   calculate max_profit
 
-better approach:
-max_profit = 0
-lptr = 0 will act as slow pointer
-rptr = 1 will act as fast pointer
-
-while lptr <= len(prices) - 1:
-    if prices[lptr] - prices[rptr] > max_proft:
-       then max profit is changed
-       also rptr moves ahead
-    else:
-       lptr moves ahead
 """
 
 
 def best_time_to_buy_and_sell_stock_cold(prices: list[int]) -> int:
     maxprofit = 0
-    lptr = 0
-    rptr = 1
+    min_price = float("inf")
 
-    while lptr < len(prices) and rptr < len(prices) - 1:
-        if prices[rptr] - prices[lptr] > maxprofit:
-            maxprofit = prices[rptr] - prices[lptr]
-        else:
-            lptr += 1
-        rptr += 1
+    for price in prices:
+        if price < min_price:
+            min_price = price
+        elif price - min_price > maxprofit:
+            maxprofit = price - min_price
+
     return maxprofit
 
 
 # print(best_time_to_buy_and_sell_stock_cold([10, 1, 5, 6, 7, 1]))
+# print(best_time_to_buy_and_sell_stock_cold([7, 1, 5, 3, 6, 4]))
