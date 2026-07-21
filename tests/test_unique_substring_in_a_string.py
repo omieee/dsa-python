@@ -1,4 +1,4 @@
-from Problems.unique_substring_in_a_string import lengthOfLongestSubstring
+from Problems.longest_substring_in_a_string import lengthOfLongestSubstring
 
 
 def test_unique_substring_in_a_string() -> None:
