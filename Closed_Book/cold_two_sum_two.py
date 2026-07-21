@@ -37,4 +37,4 @@ def two_sum_two(nums: list[int], target: int) -> list[int]:
 
 # print(two_sum_two([2, 7, 11, 15], 9))
 # print(two_sum_two([2, 3, 4], 6))
-print(two_sum_two([1, 2, 4], 4))
+# print(two_sum_two([1, 2, 4], 4))
