@@ -36,15 +36,12 @@ class LinkedList:
                 self.tail = curr  # Setting current as final, next line deletes next
             curr.next = curr.next.next  # We are mapping seconnd next to current next
 
-    def print(self):
+    def print(self) -> list:  # Just returning so that test cases is easy
         curr = self.head.next  # Skip dummy
+        out = []
         while curr:
             print(curr.val, " -> ", end="")
+            out.append(curr.val)
             curr = curr.next
         print()
-
-
-ll: LinkedList = LinkedList()
-ll.add_node(3)
-ll.add_node(5)
-ll.print()
+        return out

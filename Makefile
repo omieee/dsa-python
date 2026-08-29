@@ -1,16 +1,17 @@
 .PHONY: test lint format fix ready
+PYTHON ?= uv run python
 
 test:
-	python -m pytest -vv
+	${PYTHON} -m pytest
 
 lint:
-	python -m ruff check .
+	${PYTHON} -m ruff check .
 
 format:
-	python -m ruff format .
+	${PYTHON} -m ruff format .
 
 fix:
-	python -m ruff check . --fix
-	python -m ruff format .
+	${PYTHON} -m ruff check . --fix
+	${PYTHON} -m ruff format .
 
 ready: fix test lint

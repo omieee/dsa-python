@@ -6,7 +6,7 @@ class ListNode:
 
 
 class ReverseLinkedList:
-    def reverseList(self, head: ListNode) -> ListNode:
+    def reverseList(self, head: ListNode | None) -> ListNode | None:
         prev, curr = None, head
 
         while curr:
@@ -16,4 +16,4 @@ class ReverseLinkedList:
             prev = curr  # Then set the previous to current
             curr = nxt  # Override current with next
             # Basically we are shifting left
-        return prev  # pyright: ignore[reportReturnType]
+        return prev
