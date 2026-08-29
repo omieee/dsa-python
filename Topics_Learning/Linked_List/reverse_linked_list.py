@@ -10,8 +10,10 @@ class ReverseLinkedList:
         prev, curr = None, head
 
         while curr:
-            nxt = curr.next
-            curr.next = prev
-            prev = curr
-            curr = nxt
+            nxt = curr.next  # First make sure we capture next item, else will break the
+            # link
+            curr.next = prev  # Then point the curr to previous
+            prev = curr  # Then set the previous to current
+            curr = nxt  # Override current with next
+            # Basically we are shifting left
         return prev  # pyright: ignore[reportReturnType]
