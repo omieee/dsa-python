@@ -31,7 +31,7 @@ class LinkedList:
             curr = curr.next
             i += 1
         if curr and curr.next:  # curr exist and there is a node to delete
-            if curr.next == self.tail:  # Will the deleted node be the last node
+            if curr.next is self.tail:  # Will the deleted node be the last node
                 # So the end will get removed,so the current should now be made the tail
                 self.tail = curr  # Setting current as final, next line deletes next
             curr.next = curr.next.next  # We are mapping seconnd next to current next
