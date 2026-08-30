@@ -53,6 +53,8 @@ class LinkedList:
                 nxt = curr.next
                 curr.next = new_node
                 new_node.next = nxt
+                if new_node.next is None:
+                    self.tail = new_node
 
     def add_at_tail(self, value):
         new_node = ListNode(value=value)
