@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -9,8 +6,8 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+        self, list1: ListNode | None, list2: ListNode | None
+    ) -> ListNode | None:
         # first will creeate a dummy
         dummy = ListNode()
         curr = dummy
