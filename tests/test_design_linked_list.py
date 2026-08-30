@@ -1,6 +1,5 @@
 from Topics_Learning.Linked_List import design_linked_list
 
-
 # ll = design_linked_list.LinkedList()
 
 # ll.add_at_head(0)
@@ -42,4 +41,7 @@ def test_add_item_at_index_when_something_is_there():
     ll.add_at_head(12)
     ll.add_at_tail(99)
     ll.add_at_index(212, 2)
-    assert 212 == ll.get(3)
+    assert 212 == ll.get(2)
+    ll.add_at_index(97, 0)
+    assert 97 == ll.get(0)
+    assert [97, 12, 13, 212, 99] == ll.print()

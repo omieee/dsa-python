@@ -4,16 +4,6 @@ class ListNode:
         self.next: ListNode | None = None
 
 
-###
-# Next: problem 707, Design Linked List. New methods on top of what you have:
-# get(index), addAtHead, addAtIndex, addAtTail, deleteAtIndex.
-# Write it in Topics_Learning/Linked_List/design_linked_list.py as its own class
-
-# Test the index edge cases, since that's where 707 actually fails people: get out
-# of range → -1, addAtIndex where index == length (valid append), index > length (no-op)
-###
-
-
 class LinkedList:
     def __init__(self) -> None:
         self.head = ListNode(-1)
@@ -51,22 +41,14 @@ class LinkedList:
 
     def add_at_index(self, val, index):
         if index > len(self):
-            raise IndexError(
-                f"Length is: {len(self)},Index can be: [0...{len(self) - 1}]"
-            )
-        # If the index is head
-        elif index == 0:
-            self.add_at_head(value=val)
-        # If the index is tail
-        elif index == len(self) - 1:
-            self.add_at_tail(value=val)
+            return
         else:
             curr = self.head  # Will be at -1
             i = 0
             while i < index and curr:  # We are seeking to the correct location
                 curr = curr.next
                 i += 1
-            if curr and curr.next:
+            if curr:
                 new_node = ListNode(value=val)
                 nxt = curr.next
                 curr.next = new_node
