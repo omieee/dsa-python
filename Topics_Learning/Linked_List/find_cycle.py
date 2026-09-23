@@ -7,16 +7,15 @@ class FindCycleBruteForce:
             # This shoul be the brute force way of doing it
             # where we have a seen dictionary that will add
             # up to the most O(n) space and time is O(n)
-            seen = {}  # O(n)
-            count = 1
+            # seen = {} # This would have made is O(n^2)
+            seen = set()  # O(n)
             curr = head.next
             while curr:
-                if curr in seen.values():
+                if curr in seen:
                     return True
                 else:
-                    seen[count] = curr
+                    seen.add(curr)
                     curr = curr.next
-                    count += 1
         return False
 
 
