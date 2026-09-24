@@ -6,7 +6,7 @@ from Topics_Learning.Linked_List.list_node import ListNode
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution:
+class ReorderList:
     def reorderList(self, head: ListNode | None) -> None:
         """
         Do not return anything, modify head in-place instead.
