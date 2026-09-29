@@ -1,4 +1,4 @@
-from Closed_Book.cold_ll_cycle_day_3 import CheckCycle
+from Closed_Book.cold_ll_cycle_day_7 import CheckCycle
 from Topics_Learning.Linked_List import list_node
 
 
