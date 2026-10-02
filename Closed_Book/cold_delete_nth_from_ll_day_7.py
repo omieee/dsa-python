@@ -40,11 +40,18 @@ now as the return needs a Listnode we will create a dummynode
 and the l pointer can refer that 
 and make right pointer to head (conceptually)
 will first seek the right pointer to the position equal to n steps
-now right is at delete position we will have to bring left 1 pos back of this
+So basically we have to create a gap on n between both pointers so always 
+when right is at end and right.next is none left will always be one before the element
+to be deleted
 so now we can start moving left till there is right
 once right comes to an end left will be n+1 position
 we will set left.next to left.next.next
 then return dummynode next value as the start value is anyways invalid 
+"""
+"""
+Complexity:
+Time: O(n) : even though two while but at the end it runs only once
+Space: O(1)
 """
 
 
