@@ -33,18 +33,32 @@ Follow up: Could you do this in one pass?
 """
 
 
+"""
+Approach:
+first we wqill make sure there is something in head to delete.. if nothing return None
+now as the return needs a Listnode we will create a dummynode
+and the l pointer can refer that 
+and make right pointer to head (conceptually)
+will first seek the right pointer to the position equal to n steps
+now right is at delete position we will have to bring left 1 pos back of this
+so now we can start moving left till there is right
+once right comes to an end left will be n+1 position
+we will set left.next to left.next.next
+then return dummynode next value as the start value is anyways invalid 
+"""
+
+
 class CDN:
     def delNth(self, head: ListNode | None, n: int) -> ListNode | None:
         if head:
-            dummynode = ListNode(-1, head)
-            left = dummynode
-            right = head
-            # for right we will seek till that number
-            while n > 0 and right:
-                right = right.next
+            dn = ListNode(-1, head)
+            lft = dn
+            rgt = head
+            while n > 0 and rgt:
+                rgt = rgt.next
                 n -= 1
-            while right:
-                left = left.next
-                right = right.next
-            left.next = left.next.next
-            return dummynode.next
+            while rgt:
+                lft = lft.next
+                rgt = rgt.next
+            lft.next = lft.next.next
+            return dn.next
