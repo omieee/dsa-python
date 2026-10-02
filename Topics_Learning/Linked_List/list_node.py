@@ -50,7 +50,7 @@ def to_list(head: ListNode | None) -> list[int]:
     curr = head
     while curr:
         if id(curr) in seen:
-            break
+            raise ValueError("cycle in list")
         seen.add(id(curr))
         out.append(curr.val)
         curr = curr.next
