@@ -22,7 +22,7 @@ slow is at 2, fast is at 5
 slow is at 3, fast is at none
 Loop ends
 slow.next = slow.next.next
-which makes slow.next point to 5 .. fuck 4
+which makes slow.next point to 5 .. skip 4
 
 """
 
