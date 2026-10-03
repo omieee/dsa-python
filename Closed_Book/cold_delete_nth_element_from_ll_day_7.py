@@ -1,6 +1,5 @@
 from Topics_Learning.Linked_List import ListNode
 
-
 """
 Approach:
 Will create a dummy node so that our left pointer can start from there
