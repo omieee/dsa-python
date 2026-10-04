@@ -8,3 +8,6 @@ def test_is_valid_parenthesis() -> None:
     assert not lc20vp.isValid("([)]")
     assert lc20vp.isValid("([])")
     assert lc20vp.isValid("()[]{}")
+    assert not lc20vp.isValid("(]")
+    assert not lc20vp.isValid("]")
+    assert not lc20vp.isValid("((")
