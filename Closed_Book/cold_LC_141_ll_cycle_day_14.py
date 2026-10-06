@@ -22,7 +22,10 @@ class ColdLLCycleD14:
                 if fast == slow:
                     return True
                 else:
-                    fast = fast.next.next
-                    slow = slow.next
+                    if fast.next:
+                        fast = fast.next.next
+                        slow = slow.next
+                    else:
+                        return False
         else:
             return False
