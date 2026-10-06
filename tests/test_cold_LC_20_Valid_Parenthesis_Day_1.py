@@ -10,6 +10,7 @@ s = "(){}[]" -> True
 s = "}" -> False
 s = "([)]" -> False
 s = "([])" -> True
+s = "x{y[z]}" -> True
 """
 
 
@@ -21,3 +22,4 @@ def test_cold_LC20_Day_1() -> None:
     assert not tcl20d1.isValidD1("(}")
     assert not tcl20d1.isValidD1("}")
     assert not tcl20d1.isValidD1("([)]")
+    assert tcl20d1.isValidD1("x{y[z]}")

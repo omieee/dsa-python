@@ -36,5 +36,6 @@ class Cold_LC_20_Valid_Parentheses_Day_1:
                 else:
                     return False
             else:
-                openingStack.append(c)
+                if c in closeOpenMappingDict.values():
+                    openingStack.append(c)
         return True if not openingStack else False
