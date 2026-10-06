@@ -27,5 +27,6 @@ class ColdLLCycleD14:
                         slow = slow.next
                     else:
                         return False
+            return False
         else:
             return False
