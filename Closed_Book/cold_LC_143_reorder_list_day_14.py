@@ -19,7 +19,7 @@ Space: O(1)
 """
 
 
-class Cold_LC_143_D7:
+class Cold_LC_143_D14:
     def rerderList(self, head: ListNode) -> None:
         if head:
             slow, fast = head, head.next
