@@ -64,7 +64,7 @@ class Cold_LC_155_Sol_Type2_Day1:
 
     def pop(self) -> None:
         popped = self.valstack.pop()
-        if popped <= self.minstack[-1]:
+        if popped == self.minstack[-1]:
             self.minstack.pop()
 
     def top(self) -> int:
