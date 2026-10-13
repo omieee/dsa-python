@@ -23,7 +23,7 @@ repetedly keeping same element in min stack multiple time .. so in this case
 we will push to min stack only when the value <= top of min stack
 and pop when popped value == top of min stack. we don't need here <= because that
 condition will not come because while inserting only we are making sure by using <=
-Here also time is O(n) for a given index
+Here also time is O(1) for a given index
 Space O(n) worst case
 
 """
