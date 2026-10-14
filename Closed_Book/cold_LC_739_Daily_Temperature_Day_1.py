@@ -40,3 +40,17 @@ class Cold_LC_739_Daily_Temp_Day_1:
                 binstk.pop()
             binstk.append((t, i))
         return res
+
+
+class Cold_LC_739_Daily_Temp_Colder_Adhoc:
+    def cl79dtdAdhoc(self, temp: list[int]) -> list[int]:
+        res = [0] * len(temp)
+        binstk = []  # We will store tupple(temp, index)
+
+        for i, t in enumerate(temp):
+            while binstk and binstk[-1][0] > t:
+                # we could use pop as neetcode does, but this is me
+                res[binstk[-1][1]] = i - binstk[-1][1]
+                binstk.pop()
+            binstk.append((t, i))
+        return res
