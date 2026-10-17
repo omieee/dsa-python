@@ -1,10 +1,6 @@
 """
 Approach is:
 
-brute force way: go through O(n2) times the temp loop and find the min every time
-
-Better approach to have O(1) getMin()
-
 We have a given temp list.
 We know today and past .. Today decides the past
 
@@ -13,7 +9,7 @@ lesser temp anyday in past will pop that and calculate the diffence between days
 store in res for that pooped temperature index
 
 Complexity:
-Time: O(1)
+Time: O(n)
 Space: O(n)
 
 """
