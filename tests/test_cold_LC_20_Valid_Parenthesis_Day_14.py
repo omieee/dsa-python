@@ -11,6 +11,7 @@ s = "(){}[]" -> True
 s = "}" -> False
 s = "([)]" -> False
 s = "([])" -> True
+s = ("(])") - > False
 """
 
 
@@ -24,3 +25,4 @@ def test_cold_LC20_Day_1() -> None:
     assert not cLC20VPD14.clc20vpd14("}")
     assert not cLC20VPD14.clc20vpd14("([)]")
     assert cLC20VPD14.clc20vpd14("x{y[z]}")
+    assert not cLC20VPD14.clc20vpd14("(])")
