@@ -15,3 +15,4 @@ def test_Binary_Search_1_D_List_Day_0() -> None:
     sbs = Simple_Binary_Search.BinarySearchLinear()
     assert 3 == sbs.search([-1, 0, 2, 4, 6, 8], 4)
     assert -1 == sbs.search([-1, 0, 2, 4, 6, 8], 3)
+    assert 5 == sbs.search([-1, 0, 2, 4, 6, 8], 8)
