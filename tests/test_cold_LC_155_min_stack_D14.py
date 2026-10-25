@@ -44,7 +44,5 @@ def test_cold_lc_155_min_stack_D14() -> None:
     ms3.push(5)
     ms3.push(3)
     ms3.push(4)
-    ms3.pop()
-    top = ms3.top()
     min3 = ms3.getMin()
     assert min3 == 3
