@@ -1,0 +1,25 @@
+from Closed_Book.cold_LC_704_Binary_Search_Day_1 import Cold_LC_704_Binary_Search_Day_1
+
+
+def test_Binary_Search_1_D_List_Day_0() -> None:
+    sbs = Cold_LC_704_Binary_Search_Day_1()
+    assert 3 == sbs.search([-1, 0, 2, 4, 6, 8], 4)
+    assert -1 == sbs.search([-1, 0, 2, 4, 6, 8], 3)
+    assert 5 == sbs.search([-1, 0, 2, 4, 6, 8], 8)
+    assert 0 == sbs.search([5], 5)
+    assert -1 == sbs.search([5], -10)
+    assert 0 == sbs.search([-2, 2], -2)
+    assert 1 == sbs.search([-2, 2], 2)
+    assert -1 == sbs.search([-5, 0, 3, 9], -10)
+    assert -1 == sbs.search([-5, 0, 3, 9], 15)
+    assert -1 == sbs.search([-10, -5, 2, 8, 15], 0)
+    assert 3 == sbs.search([-9999, -500, -20, -5], -5)
+    assert 1 == sbs.search([1, 100, 9999], 100)
+    assert 1 == sbs.search([-100, 0, 100], 0)
+    assert 2 == sbs.search([10, 20, 30, 40, 50, 60], 30)
+    assert 3 == sbs.search([10, 20, 30, 40, 50, 60], 40)
+    assert 0 == sbs.search([-9999, 0, 9999], -9999)
+    assert 2 == sbs.search([-9999, 0, 9999], 9999)
+    assert 2 == sbs.search([-10, -5, 0, 5, 10], 0)
+    assert 9999 == sbs.search(list(range(-5000, 5000)), 4999)
+    assert -1 == sbs.search(list(range(-5000, 5000)), 5000)
