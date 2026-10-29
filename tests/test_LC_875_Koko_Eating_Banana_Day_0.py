@@ -21,3 +21,4 @@ def test_koko_eating_banana_day_0() -> None:
     assert 4 == keb.minEatingSpeed([3, 6, 7, 11], h=8)
     assert 30 == keb.minEatingSpeed([30, 11, 23, 4, 20], h=5)
     assert 23 == keb.minEatingSpeed([30, 11, 23, 4, 20], h=6)
+    assert 1 == keb.minEatingSpeed([1], h=1)
