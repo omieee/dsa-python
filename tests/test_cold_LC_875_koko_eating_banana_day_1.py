@@ -10,4 +10,4 @@ def test_cold_lc_875_koko_easting_banana_d_1():
     assert 23 == keb.slowestSpeedOfEating([30, 11, 23, 4, 20], hours=6)
     assert 1 == keb.slowestSpeedOfEating([1], hours=1)
     assert 1 == keb.slowestSpeedOfEating([1, 2], 3)
-    assert 1 == keb.slowestSpeedOfEating([2], 2)
+    assert 1 == keb.slowestSpeedOfEating([4], 4)
