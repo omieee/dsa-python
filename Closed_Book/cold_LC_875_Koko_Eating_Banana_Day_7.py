@@ -26,7 +26,6 @@ class Cold_LC_875_Koko_Eating_Banana_Day_7:
                 # koko can eat faster
                 speed = min(speed, m)
                 fa = m - 1
-
             else:
                 sl = m + 1
         return speed
