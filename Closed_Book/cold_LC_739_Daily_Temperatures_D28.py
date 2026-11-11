@@ -28,15 +28,13 @@ class Cold_LC_739_Daily_Temp_D28:
         stk = []  # (i, t) will store the day and temp on that day
 
         for i, t in enumerate(temp):
-            if stk:  # check if we are at start and just push that day value to stack
-                # stack should not be empty and top should be < than that days temp
-                while stk and stk[-1][1] < t:
-                    popped = stk.pop()  # if above is true will pop out the lower temp
-                    # now for that days index will subtrat the current day - that day
-                    res[popped[0]] = i - popped[0]
-                # at last will store current day on stack and this makes stack always
-                # hotter to colder
-                stk.append((i, t))
+            # stack should not be empty and top should be < than that days temp
+            while stk and stk[-1][1] < t:
+                popped = stk.pop()  # if above is true will pop out the lower temp
+                # now for that days index will subtrat the current day - that day
+                res[popped[0]] = i - popped[0]
+            # at last will store current day on stack and this makes stack always
+            # hotter to colder
             stk.append((i, t))
 
         return res
