@@ -19,6 +19,8 @@ Output: [1,1,4,2,1,1,0,0]
 
 stk = [(0, 73)]
 
+Complexity: O(n) for both
+
 """
 
 
