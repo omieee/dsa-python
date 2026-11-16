@@ -35,6 +35,7 @@ thing in that sorted list .. will divide each time the remaing list items to sea
 mid and will check if that mid is > target if true that means target is on left will
 decree right else will increase left 1 pos to mid
 
+Complexity: O(log n)
 """
 
 
