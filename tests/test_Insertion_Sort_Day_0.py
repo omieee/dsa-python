@@ -30,15 +30,15 @@ def test_Insertion_sort_Day_0_test_2() -> None:
     pairs.append(isd.Pair(5, "apple"))
     pairs.append(isd.Pair(2, "banana"))
     pairs.append(isd.Pair(9, "cherry"))
-    pairs.append(isd.Pair(2, "banana"))
-    pairs.append(isd.Pair(5, "apple"))
+    pairs.append(isd.Pair(2, "kiwi"))
+    pairs.append(isd.Pair(5, "mango"))
 
     want = [
-        [(5, "apple"), (2, "banana"), (9, "cherry"), (2, "banana"), (5, "apple")],
-        [(2, "banana"), (5, "apple"), (9, "cherry"), (2, "banana"), (5, "apple")],
-        [(2, "banana"), (5, "apple"), (9, "cherry"), (2, "banana"), (5, "apple")],
-        [(2, "banana"), (2, "banana"), (5, "apple"), (9, "cherry"), (5, "apple")],
-        [(2, "banana"), (2, "banana"), (5, "apple"), (5, "apple"), (9, "cherry")],
+        [(5, "apple"), (2, "banana"), (9, "cherry"), (2, "kiwi"), (5, "mango")],
+        [(2, "banana"), (5, "apple"), (9, "cherry"), (2, "kiwi"), (5, "mango")],
+        [(2, "banana"), (5, "apple"), (9, "cherry"), (2, "kiwi"), (5, "mango")],
+        [(2, "banana"), (2, "kiwi"), (5, "apple"), (9, "cherry"), (5, "mango")],
+        [(2, "banana"), (2, "kiwi"), (5, "apple"), (5, "mango"), (9, "cherry")],
     ]
     result = isd.insertionSort(pairs=pairs)
     got = []
