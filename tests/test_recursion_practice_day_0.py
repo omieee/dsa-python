@@ -29,3 +29,8 @@ def test_check_fibbonacci_1_day_0() -> None:
 def test_check_fibbonacci_2_day_0() -> None:
     fib = recursion_practice.Recursion_Practice()
     assert 1 == fib.fibonacci(2)
+
+
+def test_check_fibbonacci_6_day_0() -> None:
+    fib = recursion_practice.Recursion_Practice()
+    assert 8 == fib.fibonacci(6)
